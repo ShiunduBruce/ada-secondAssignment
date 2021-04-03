@@ -1,0 +1,85 @@
+V "GNAT Lib v2020"
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+
+U conveyer_system%b	conveyer_system.adb	d50c2920 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+
+U conveyer_system%s	conveyer_system.ads	f2124df7 BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W rotate%s		rotate.adb		rotate.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20200819050644 bb51c45a ada.numerics%s
+D a-nudira.ads		20200819050644 5984dff3 ada.numerics.discrete_random%s
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D conveyer_system.ads	20210321202342 9b827e25 conveyer_system%s
+D conveyer_system.adb	20210321202804 4e8e5705 conveyer_system%b
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D rotate.ads		20210320201834 9ee0394c rotate%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-rannum.ads		20200819050648 99ade2f2 system.random_numbers%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [conveyer_system standard 6 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r31 2r6
+X 4 a-numeri.ads
+16K13*Numerics 32e17 10|2r10
+X 5 a-nudira.ads
+44k22*Discrete_Random 81e33 10|2w19
+X 8 a-textio.ads
+57K13*Text_IO 727e16 10|1w10 1r35
+508U14*Put_Line 11|16s10
+X 10 conveyer_system.ads
+4E9 Item 9r45 11r38 16r46 11|8r42 16r19 21r47 26r35
+5E9 Index 7r24 8r52 16r26 17r23 18r21 19r23 19r32 11|3r49 21r53
+6k9*Conveyer_System 4z9 5z9 16E9 29l5 29e20 11|1b14 33l5 33t20
+7R9*Conveyor 7d19 8r36 9r29 10r30 11r20 12r29 17c9 20e14 11|3r33 8r26 13r30
+. 20r30 26r17
+7*19 Max{5E9} 17r18 18r34
+8U14*Move_Robot 8=26 8>46 11|3b11 6l5 6t15
+8r26 C{7R9} 11|3b23 5m4
+8*46 E{5E9} 11|3b43 5r24
+9U14*Put 9=19 9>39 11|8b11 11l5 11t8
+9r19 C{7R9} 11|8b16 10m4 10r12
+9*39 E{4E9} 11|8b36 10r33
+10U14*Show 10=20 11|13b14 18l8 18t12
+10r20 C{7R9} 11|13b20 15r16 16r30
+11V13*Get{4E9} 11>17 11|26b10 29l8 29t11
+11r17 C{7R9} 11|26b14 28r11 28r19
+12U14*Move 12=19 11|20b14 24l8 24t12
+12r19 C{7R9} 11|20b20 23m23 23r23
+16A9 TArray(4E9)<5E9> 18r14 11|21r60
+18a7 Items{16A9} 11|10m6 15r18 16r32 23m25 28r13
+19*7 Robot_Position{5E9} 11|5m6 10r14 28r21
+X 11 conveyer_system.adb
+15e11 I 16r38
+21U17 conveyor_rotate[14|7] 23s7
+X 14 rotate.ads
+7u11*Rotate 10|1w19 11|21r40
+
