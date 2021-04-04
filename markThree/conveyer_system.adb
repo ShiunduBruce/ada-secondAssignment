@@ -12,9 +12,12 @@ end Put;
 
    procedure Show( C: in out Conveyor) is
    begin
+      Put_Line("The items are :");
       for I in C.Items'Range loop
-         Put_Line(Item'Image(C.Items(I) ));
+         Put(Item'Image(C.Items(I) ) & " ");
       end loop;
+      New_Line;
+      Put_Line("Robot's position is :" & Index'Image(C.Robot_Position));
    end Show;
 
    procedure Move (C: in out Conveyor) is

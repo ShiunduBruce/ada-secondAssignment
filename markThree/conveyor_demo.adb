@@ -4,7 +4,7 @@ use Ada.Integer_Text_IO, Ada.Text_IO;
 procedure conveyor_demo is
 type Toys is (Nothing, Car, Doll, Ball);
 package conv is new Conveyer_System(Toys, Positive);
-B: conv.Conveyor(8);
+B: conv.Conveyor(80);
 
 begin
 conv.Move_Robot(B,1);

@@ -5,7 +5,7 @@ procedure conveyor_demo is
    type Toys is (Nothing, Car, Doll, Ball);
    package conv is new Conveyer_System(Toys, Positive);
    use conv;
-   B: Conveyor(8);
+   B: Conveyor(13);
 
 begin
 Move_Robot(B,1);
@@ -15,9 +15,9 @@ Put(B, Car);
 Move_Robot(B,3);
 Put(B,Doll);
    Move_Robot(B,3);
-  -- Put(B,Ball); --raise a slot_not_empty
+ --Put(B,Ball); --raise a slot_not_empty
    Move_Robot(B,7);
-   --Put_Line(Toys'Image(Get(B))); --raise a slot_is_empty
+ --Put_Line(Toys'Image(Get(B))); --raise a slot_is_empty
 show(B);
 Move(B, RIGHT);
 New_Line;

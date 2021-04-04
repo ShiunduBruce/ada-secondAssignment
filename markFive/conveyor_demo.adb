@@ -6,12 +6,12 @@ procedure conveyor_demo is
 
    procedure PutStir is
    begin
-      Put_Line(" * ");
+      Put(" * ");
    end PutStir;
 
    package conv is new Conveyer_System(Toys, Positive, PutStir);
    use conv;
-   C: Conveyor(8);
+   C: Conveyor(15);
    AA : Algorithm := (Put, Move_Right, Move_Right, Put);
    AB : Algorithm := (Get, Move_Left, Move_Left, Get);
    AC : Algorithm := (Put, Move_Left);
@@ -24,7 +24,7 @@ Run (C, AB, 1);
 Show (C);New_Line;
 Run (C, AC, 5);
 Show (C);New_Line;
-Run (C, AD, 5);
+Run (C, AD, 2);
 Show (C);New_Line;
 
 end conveyor_demo;

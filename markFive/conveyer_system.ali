@@ -1,0 +1,119 @@
+V "GNAT Lib v2020"
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+
+U conveyer_system%b	conveyer_system.adb	f7a89692 NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+Z ada.text_io%s		a-textio.adb		a-textio.ali
+W system%s		system.ads		system.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+
+U conveyer_system%s	conveyer_system.ads	ad558568 BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W rotate%s		rotate.adb		rotate.ali
+
+D ada.ads		20200819050644 76789da1 ada%s
+D a-except.ads		20200819050644 a7106115 ada.exceptions%s
+D a-ioexce.ads		20200819050644 e4a01f64 ada.io_exceptions%s
+D a-numeri.ads		20200819050644 bb51c45a ada.numerics%s
+D a-nudira.ads		20200819050644 5984dff3 ada.numerics.discrete_random%s
+D a-nudira.adb		20200819050644 0bfd6ec4 ada.numerics.discrete_random%b
+D a-stream.ads		20200819050644 119b8fb3 ada.streams%s
+D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
+D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
+D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
+D conveyer_system.ads	20210404220210 c4c5b6ba conveyer_system%s
+D conveyer_system.adb	20210404212754 336d2028 conveyer_system%b
+D interfac.ads		20200819050646 5ab55268 interfaces%s
+D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
+D rotate.ads		20210320201834 9ee0394c rotate%s
+D system.ads		20200819050648 32a08138 system%s
+D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200819050646 54135002 system.exception_table%s
+D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
+D s-parame.ads		20200819050648 4752c4cb system.parameters%s
+D s-rannum.ads		20200819050648 99ade2f2 system.random_numbers%s
+D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200819050648 a7318a92 system.soft_links%s
+D s-stache.ads		20200819050648 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200819050648 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200819050648 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200819050648 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200819050648 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200819050648 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [conveyer_system standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 1r31 2r6 12|48r34
+X 4 a-numeri.ads
+16K13*Numerics 32e17 11|2r10 12|48r38
+X 5 a-nudira.ads
+44k22*Discrete_Random 81e33 11|2w19 12|48r47
+50R9 Generator<21|63R9> 12|49r22[48]
+52V13 Random{11|5E9} 12|70s41[48]
+61U14 Reset<21|100p14> 12|68s31[48]
+X 9 a-textio.ads
+57K13*Text_IO 727e16 11|1w10 1r35
+264U14*New_Line 12|20s7 29s7 73s22
+465U14*Put 12|26s16 74s22
+508U14*Put_Line 12|21s7 30s7
+X 11 conveyer_system.ads
+5E9 Item 14r45 16r38 23r46 25r53 12|8r42 10r38 18r15 18r23 26r20 34r47 39r35
+. 41r38 48r63 69r52 74r44 75r51
+6E9 Index 10r24 12r28 13r52 23r26 24r23 25r21 26r23 26r32 12|3r52 30r42 34r53
+. 55r41 58r36 62r41 65r36
+7U19 Put_Nothing 12|24s16
+8k9*Conveyer_System 5z9 6z9 7z19 23E9 29l5 29e20 12|1b14 96l5 96t20
+9X4*Slot_Is_Empty 12|42r16
+9X19*Slot_Not_Empty 12|11r15
+10R9*Conveyor 10d19 13r36 14r29 15r30 16r20 17r29 18r28 24c9 27e14 12|3r36
+. 8r26 17r30 33r30 39r17 47r28
+10*19 Max{6E9} 24r18 25r34
+11E9*Command 11e53 12r47
+11n21*Move_Left{11E9} 12|54r21
+11n32*Move_Right{11E9} 12|61r21
+11n44*Put{11E9} 12|67r21
+11n49*Get{11E9} 12|72r21
+12A9*Algorithm(11E9)<6E9> 18r45 12|47r45
+13U14*Move_Robot 13=26 13>46 12|3b14 6l5 6t15 56s22 58s22 63s22 65s22
+13r26 C{10R9} 12|3b26 5m7
+13*46 E{6E9} 12|3b46 5r27
+14U14*Put 14=19 14>39 12|8b11 15l5 15t8 70s22
+14r19 C{10R9} 12|8b16 10r9 10r17 14m4 14r12
+14*39 E{5E9} 12|8b36 14r33
+15U14*Show 15=20 12|17b14 31l8 31t12
+15r20 C{10R9} 12|17b20 22r19 23r16 26r31 30r54
+16V13*Get{5E9} 16>17 12|39b10 45l8 45t11
+16r17 C{10R9} 12|39b14 41r10 41r18 44r11 44r19
+17U14*Move 17=19 12|33b14 37l8 37t12
+17r19 C{10R9} 12|33b20 36m23 36r23
+18U14*Run 18=18 18>38 18>56 12|47b14 81l8 81t11
+18r18 C{10R9} 12|47b18 55r22 56m33 56r36 58m33 58r47 62r22 63m33 63r36 65m33
+. 65r47 69r22 69r31 70m26 74r55 74r63 75m22 75r30
+18a38 A{12A9} 12|47b38 52r19 53r18
+18i56 n{natural} 12|47b56 51r19
+23A9 TArray(5E9)<6E9> 25r14 12|34r60
+25a7 Items{23A9} 12|10r11 14m6 22r21 23r18 26r33 36m25 41r12 44r13 56r38
+. 63r38 69r24 74r57 75m24
+26*7 Robot_Position{6E9} 12|5m9 10r19 14r14 30r56 41r20 44r21 55r24 58r49
+. 62r24 65r49 69r33 74r65 75r32
+X 12 conveyer_system.adb
+18*7 first{11|5E9} 23r29
+22e14 I 23r24 26r39
+34U17 conveyor_rotate[15|7] 36s7
+48K15 Random_Item[5|44] 49r10 68r19 70r29
+49r7 G{5|50R9[48]} 68r37 70r48
+51i11 i{integer}
+52e14 j 53r20
+X 15 rotate.ads
+7u11*Rotate 11|1w19 12|34r40
+

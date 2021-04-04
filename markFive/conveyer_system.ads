@@ -6,11 +6,10 @@ generic
    type Index is (<>);
    with procedure Put_Nothing;
 package Conveyer_System is
-
+   Slot_Is_Empty, Slot_Not_Empty : Exception;
    type Conveyor (Max: Index) is limited private;
    type Command is (Move_Left, Move_Right, Put, Get);
    type Algorithm is array(Index range <>) of Command;
-   ---for Command use (Move_Left => 1, Move_Right => 2, Put=>3, Get => 4);
    procedure Move_Robot( C: in out Conveyor; E: in Index );
    procedure Put( C: in out Conveyor; E: in Item );
    procedure Show( C: in out Conveyor );
@@ -23,7 +22,7 @@ private
    --function generateItem(C: Conveyor) return Item;
    type TArray is array( Index range <> ) of Item;
    type Conveyor(Max: Index) is record
-      Items: TArray(Index'First..Max);
+      Items: TArray(Index'First..Max) := ( others=> Item'First );
       Robot_Position: Index := Index'First;
    end record;
 

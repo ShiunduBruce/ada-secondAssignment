@@ -7,25 +7,27 @@ end Move_Robot;
 
 procedure Put( C: in out Conveyor; E: in Item ) is
    begin
-      --temporary solution as we do not want to put something to keep holding of first position
-      --if C.Robot_Position = C.Items'First then
-       --  C.Robot_Position := C.Items'Last;
-      --end if;
+     if C.Items(C.Robot_Position) /= Item'First then
+        raise Slot_Not_Empty;
+      end if;
 
    C.Items(C.Robot_Position) := E;
 end Put;
 
    procedure Show( C: in out Conveyor) is
-      first : Item := C.Items(C.Items'First);
+      first : Item := Item'First;
    begin
-      for I in C.Items'Range loop
-         if C.Items(I) = first then
-            Put_Nothing;
-         else
-            Put_Line(Item'Image(C.Items(I) ));
+      New_Line;
+      Put_Line("The items are :");
+         for I in C.Items'Range loop
+            if C.Items(I) = first then
+               Put_Nothing;
+            else
+               Put(Item'Image(C.Items(I) ) & " ");
          end if;
-
       end loop;
+      New_Line;
+      Put_Line("Robot's position is :" & Index'Image(C.Robot_Position));
    end Show;
 
    procedure Move (C: in out Conveyor) is
@@ -35,7 +37,10 @@ end Put;
    end Move;
 
 function Get(C: Conveyor ) return Item is
-begin
+   begin
+      if C.Items(C.Robot_Position) = Item'First then
+         raise Slot_Is_Empty;
+      end if;
    return C.Items(C.Robot_Position);
    end Get;
 
@@ -59,9 +64,15 @@ begin
                    else
                      Move_Robot(C, Index'Succ(C.Robot_Position));
                   end if;
-               when Put    => 	Random_Item.Reset(G); Put(C, Random_Item.Random(G));
-               when Get    => Put(C, C.Items(C.Items'First)); --We remove it by puttiing nothing
-
+               when Put    =>
+                  Random_Item.Reset(G);
+                  if C.Items( C.Robot_Position ) = Item'First then --We put when it is empty
+                     Put(C, Random_Item.Random(G));
+                  end if;
+               when Get    =>
+                     New_Line;
+                     Put("Item gotten :" & Item'Image(C.Items(C.Robot_Position) ));
+                     C.Items(C.Robot_Position) := Item'First; --We remove it by puttiing nothing
                when others => null;
             end case;
          end loop;

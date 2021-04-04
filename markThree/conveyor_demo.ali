@@ -6,18 +6,22 @@ RN
 RV NO_IO
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
 
-U conveyor_demo%b	conveyor_demo.adb	951f72fd NE OO SU IL
+U conveyor_demo%b	conveyor_demo.adb	329502c2 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.numerics%s	a-numeri.ads		a-numeri.ali
 Z ada.numerics.discrete_random%s
+Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W conveyer_system%s	conveyer_system.adb	conveyer_system.ali
 Z interfaces%s		interfac.ads		interfac.ali
 Z rotate%s		rotate.adb		rotate.ali
 Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
 D ada.ads		20200819050644 76789da1 ada%s
 D a-except.ads		20200819050644 a7106115 ada.exceptions%s
@@ -30,18 +34,20 @@ D a-tags.ads		20200819050644 edddc8f0 ada.tags%s
 D a-textio.ads		20200819050644 aef4d56d ada.text_io%s
 D a-tiinio.ads		20200819050644 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20200819050644 0e9b276f ada.unchecked_conversion%s
-D conveyer_system.ads	20210321202342 9b827e25 conveyer_system%s
-D conveyer_system.adb	20210321202804 4e8e5705 conveyer_system%b
-D conveyor_demo.adb	20210321202946 56225011 conveyor_demo%b
+D conveyer_system.ads	20210404214134 2ebad251 conveyer_system%s
+D conveyer_system.adb	20210404214248 61dc8035 conveyer_system%b
+D conveyor_demo.adb	20210404214326 44908c5a conveyor_demo%b
 D interfac.ads		20200819050646 5ab55268 interfaces%s
 D i-cstrea.ads		20200819050646 e53d8b8e interfaces.c_streams%s
 D rotate.ads		20210320201834 9ee0394c rotate%s
 D rotate.adb		20210320205240 5d6e6e4d rotate%b
 D system.ads		20200819050648 32a08138 system%s
+D s-conca2.ads		20200819050646 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200819050646 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200819050646 54135002 system.exception_table%s
 D s-ficobl.ads		20200819050646 078245e4 system.file_control_block%s
 D s-imenne.ads		20200819050646 614c06c0 system.img_enum_new%s
+D s-imgint.ads		20200819050646 02dbe0c2 system.img_int%s
 D s-parame.ads		20200819050648 4752c4cb system.parameters%s
 D s-rannum.ads		20200819050648 99ade2f2 system.random_numbers%s
 D s-secsta.ads		20200819050648 9b3ab94b system.secondary_stack%s
@@ -71,7 +77,7 @@ X 12 conveyer_system.ads
 10U14 Show 14|18s9[6] 21s9[6]
 12U14 Move 14|19s9[6]
 X 13 conveyer_system.adb
-21U17 conveyor_rotate[17|7] 18|1b11[14|6]
+24U17 conveyor_rotate[17|7] 18|1b11[14|6]
 X 14 conveyor_demo.adb
 4U11*conveyor_demo 4b11 23l5 23t18
 5E6 Toys 5e40 6r37

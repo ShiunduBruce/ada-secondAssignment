@@ -15,7 +15,7 @@ package Conveyer_System is
 private
    type TArray is array( Index range <> ) of Item;
    type Conveyor(Max: Index) is record
-      Items: TArray(Index'First..Max);
+      Items: TArray(Index'First..Max) := (others => Item'First);
       Robot_Position: Index := Index'First;
    end record;
    --Extend in the Conveyer_System generic package with a Command enumeration type,
